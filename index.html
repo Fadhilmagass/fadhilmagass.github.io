@@ -165,20 +165,37 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form>
+          <!-- Alert -->
+          <div class="alert my-alert alert-success alert-dismissible fade show d-none" role="alert">
+            <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <!-- Akhir ALert -->
+          <form name="portfolio-contact-form">
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="name" aria-describedby="name" />
+              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" />
+              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
             </div>
             <div class="mb-3">
               <label for="pesan" class="form-label">Pesan</label>
-              <textarea class="form-control" id="pesan" rows="3"></textarea>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Kirim</button>
+
+            <!-- Button Kirim -->
+            <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+            <!-- AKhir Button Kirim -->
+
+            <!-- Loading Button -->
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
+            <!-- Akhir Loading Button -->
+
           </form>
         </div>
       </div>
@@ -193,7 +210,8 @@
 
   <!-- Footer -->
   <footer class="bg-primary text-white text-center pb-4">
-    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="#" class="text-white fw-bold">Fadhil Muhammad Agast</a></p>
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="#" class="text-white fw-bold">Fadhil
+        Muhammad Agast</a></p>
   </footer>
   <!-- Akhir Footer -->
 
@@ -203,6 +221,34 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby7nWldyWYzD1Btp0x0It9vossuGM2q5EdLf7AdyiczjAad7GxcCfr1XSx4tL0KXrESuQ/exec'
+    const form = document.forms['portfolio-contact-form'];
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myALert = document.querySelector('.my-alert');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // Ketika tombol submit diklik
+      // Tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('.d-none');
+      btnKirim.classList.toggle('.d-none');
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          // Tampilkan tombol kirim, hilangkan tombol loading
+          btnLoading.classList.toggle('.d-none');
+          btnKirim.classList.toggle('.d-none');
+          // Tampilkan ALert
+          myALert.classList.toggle('d-none');
+          //Reset Form
+          form.reset();
+          console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--

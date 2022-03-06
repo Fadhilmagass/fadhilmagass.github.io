@@ -10,8 +10,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <!-- Bootstrap CDN -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- My CSS -->
   <link rel="stylesheet" href="style.css">
@@ -41,6 +44,9 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
@@ -52,9 +58,9 @@
   <!-- Jumbotron -->
   <section class="jumbotron text-center">
     <img src="./img/profile-pict_180x240.png" alt="Profile-Pict" class="rounded-circle border border-light border-2"
-      width="200px" height="200px">
+      width="200px" height="200px" />
     <h1 class="display-4">Fadhil Muhammad Agast</h1>
-    <p class="lead">Mahasiswa | Web Developer</p>
+    <p class="lead"></p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#fff" fill-opacity="1"
         d="M0,192L48,213.3C96,235,192,277,288,250.7C384,224,480,128,576,101.3C672,75,768,117,864,149.3C960,181,1056,203,1152,186.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -73,11 +79,11 @@
       </div>
 
       <div class="row justify-content-center fs-5 text-center ">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, facilis ipsam expedita molestias commodi
             ratione hic provident officiis dolores blanditiis.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat nesciunt minus non facere, rem
             qui amet dolores. Sint sit velit iste excepturi totam laboriosam?</p>
         </div>
@@ -101,7 +107,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500">
             <img src="./img/MyProjects-img/Keyboard-1.jpg" class="card-img-top" alt="Project-1">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -110,7 +116,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
             <img src="./img/MyProjects-img/Keyboard-2.jpg" class="card-img-top" alt="Project-2">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -119,7 +125,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
             <img src="./img/MyProjects-img/Keyboard-3.jpg" class="card-img-top" alt="Project-3">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -128,7 +134,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
             <img src="./img/MyProjects-img/Keyboard-4.jpg" class="card-img-top" alt="Project-4">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -137,7 +143,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="500">
             <img src="./img/MyProjects-img/Keyboard-5.jpg" class="card-img-top" alt="Project-5">
             <div class="card-body">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -154,6 +160,70 @@
     </svg>
   </section>
   <!-- Akhir Projects -->
+
+  <!-- Galerry -->
+  <section id="gallery">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Gallery</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/1.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 1">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/2.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 2">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/3.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 3">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/4.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 4">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/5.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 5">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/6.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 6">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/7.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 7">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/8.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 8">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/9.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 9">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <img src="./img/Thumbnail/10.png" class="img-fluid gallery-img" width="300" height="300" alt="Gambar 10">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Akhir Galerry -->
 
   <!-- Contact -->
   <section id="contact">
@@ -176,15 +246,15 @@
           <form name="portfolio-contact-form">
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
+              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+              <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
             </div>
             <div class="mb-3">
               <label for="pesan" class="form-label">Pesan</label>
-              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+              <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
             </div>
 
             <!-- Button Kirim -->
@@ -212,7 +282,8 @@
 
   <!-- Footer -->
   <footer class="bg-primary text-white text-center pb-4">
-    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="#" class="text-white fw-bold">Fadhil
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/fadhilmagass/"
+        target="_blank" class="text-white fw-bold">Fadhil
         Muhammad Agast</a></p>
   </footer>
   <!-- Akhir Footer -->
@@ -224,12 +295,38 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    const galleryImage = document.querySelectorAll('.gallery-img');
+    galleryImage.forEach((img, i) => {
+      img.dataset.aos = 'fade-down';
+      img.dataset.aosDelay = i * 100;
+      img.dataset.aosDuration = 1000;
+    })
+
+    AOS.init({
+      once: true,
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Mahasiswa | Web Developer'})
+    gsap.from('.jumbotron img', { duration: 1, y: -100, rotateY: 360, opacity: 0, ease: 'bounce' });
+    gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' })
+    gsap.from('.display-4', { duration: 1, x: -50, opacity: 0, ease: 'back', delay: 0.5 })
+  </script>
+
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycby7nWldyWYzD1Btp0x0It9vossuGM2q5EdLf7AdyiczjAad7GxcCfr1XSx4tL0KXrESuQ/exec'
     const form = document.forms['portfolio-contact-form'];
     const btnKirim = document.querySelector('.btn-kirim');
     const btnLoading = document.querySelector('.btn-loading');
     const myALert = document.querySelector('.my-alert');
+    const errAlert = document.querySelector('.err-alert');
 
     form.addEventListener('submit', e => {
       e.preventDefault();
